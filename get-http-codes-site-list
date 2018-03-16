@@ -1,0 +1,19 @@
+#!/bin/bash
+#Ayhan ARDA - ayhanarda.com
+while read LINE; do
+  curl -o /dev/null --silent --progress-bar --head --write-out '%{http_code} %{url_effective}\n' "$LINE" >> result.txt
+done < url-list.txt
+
+---------------------
+
+
+Example Result
+
+301 HTTP://xyzdasdasdas.com/
+404 HTTP://vbgbgfbfg.fdssvsv.com/
+200 HTTP://hostrazzi.com/
+404 HTTP://sfdbr33e.com/
+404 HTTP://3gnhfdji.com/
+200 HTTP://ayhanarda.com/
+404 HTTP://wevwev2g2vv2v23v23v.net/
+503 HTTP://fdgdfb33h3.net/
