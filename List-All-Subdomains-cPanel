@@ -1,1 +1,1 @@
-echo "Cpanel List All Subdomains script by Ayhan ARDA - ayhanarda.com" && echo start && for i in $(ls /var/cpanel/users); do /scripts/listsubdomains $i;done | grep -v ":" > test.txt && sleep 1 && awk '{print substr($0,2)}' test.txt
+echo "Cpanel List All Subdomains script by Ayhan ARDA - ayhanarda.com" && echo start && for i in $(ls /var/cpanel/users); do /scripts/listsubdomains $i;done | grep -v ":" > subdomains.txt && sleep 1 && awk '{print substr($0,2)}' subdomains.txt
